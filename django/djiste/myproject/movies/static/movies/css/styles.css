@@ -1,0 +1,775 @@
+/* Common */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Cabin", sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 0.5%;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 15px 50px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header ul {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header ul li a {
+  text-decoration: none;
+  color: white;
+}
+.header ul li a:hover {
+  color: rgb(235, 157, 84);
+  transition: all 0.4s;
+}
+.header img {
+  width: 130px;
+}
+
+/* Main */
+.main {
+  padding-top: 60px;
+}
+
+/* Index */
+.index {
+  display: flex;
+  background-color: #5f1212;
+}
+.index .navbar {
+  width: 640px;
+  padding: 30px 35px;
+  background-color: #0a0a0a;
+}
+.index .navbar ul {
+  margin-top: 30px;
+}
+.index .navbar ul li {
+  list-style: none;
+  margin: 14px 0;
+}
+.index .navbar ul li a {
+  color: #fff;
+}
+.index .navbar ul li a:hover {
+  color: rgb(194, 7, 194);
+  transition: all 0.4s;
+}
+
+.index .navbar img {
+  width: 120px;
+  margin-top: 40px;
+}
+
+.home-section {
+  padding: 20px 45px;
+}
+
+.index .home-section h1 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.7px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.index .home-section .cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  gap: 30px;
+}
+.index .home-section .article-panel p {
+  letter-spacing: 0.9px;
+}
+.index .home-section .card {
+  width: 22.88%;
+  border: 1px solid #441616;
+  box-shadow: 0px 0px 20px 4px #3f1010e7;
+  transition: all 0.5s;
+}
+.index .home-section .card-detail {
+  width: 100%;
+  display: flex;
+  column-gap: 40px;
+}
+.index .home-section .card-detail img {
+  width: 330px;
+}
+.index .home-section .cards .card-detail h2 {
+  color: rgb(255, 255, 255);
+}
+
+.index .home-section .cards .card-detail .link:hover {
+  background-color: #cc3030;
+  color: #fff;
+}
+.index .home-section .cards .card-detail p {
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 1.4;
+  font-style: italic;
+  width: 100%;
+}
+
+.index .home-section .card:hover {
+  transition: all 0.5s;
+  transform: scale(1.02);
+}
+
+@media only screen and (max-width: 1200px) {
+  .index .home-section .card {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .index .home-section .card {
+    width: 100%;
+  }
+}
+
+.index .home-section .cards .card h2 {
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  text-align: center;
+}
+.index .home-section .cards .card .link {
+  width: 100px;
+  height: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 7px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 5px;
+  background-color: rgba(240, 57, 57, 0.1);
+  border: 1px solid rgba(240, 57, 57, 0.1);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(240, 57, 57, 0.3);
+  box-shadow: 0 3px 5px 0 rgba(240, 57, 57, 0.3);
+}
+.index .home-section .cards .card .link:hover {
+  background-color: #cc3030;
+  color: #fff;
+}
+.index .home-section .cards .card p {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+.index .home-section img {
+  width: 100%;
+}
+.index .navbar ul .movie .name {
+  display: flex;
+  column-gap: 10px;
+  color: #9c0303;
+  font-size: 20px;
+  font-weight: 700;
+}
+.index .navbar ul .movie .IMDb span {
+  color: #e9c8c8;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.index .navbar ul .movie .IMDb {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+.index .navbar ul .movie .IMDb p {
+  color: #bd0c0c;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.selected {
+  font-size: 20px;
+  font-weight: 600;
+  color: #9c0303;
+}
+
+/* Cards */
+.all-cards {
+  background-color: #5f1212;
+}
+.all-cards .cards-section h1 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.7px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.all-cards .cards-section .cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  gap: 35px;
+}
+.all-cards .cards-section .article-panel p {
+  letter-spacing: 0.9px;
+}
+.all-cards .cards-section .card {
+  width: 23%;
+  border: 1px solid #441616;
+  box-shadow: 0px 0px 20px 4px #3f1010e7;
+  transition: all 0.5s;
+}
+.all-cards .cards-section .card-detail {
+  width: 100%;
+  display: flex;
+  column-gap: 40px;
+}
+.all-cards .cards-section .card-detail img {
+  width: 330px;
+}
+.all-cards .cards-section .cards .card-detail h2 {
+  color: rgb(255, 255, 255);
+}
+
+.all-cards .cards-section .cards .card-detail .link:hover {
+  background-color: #cc3030;
+  color: #fff;
+}
+.all-cards .cards-section .cards .card-detail p {
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 1.4;
+  font-style: italic;
+  width: 100%;
+}
+
+.all-cards .cards-section .card:hover {
+  transition: all 0.5s;
+  transform: scale(1.02);
+}
+
+@media only screen and (max-width: 1200px) {
+  .all-cards .cards-section .card {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .all-cards .cards-section .card {
+    width: 100%;
+  }
+}
+
+.all-cards .cards-section .cards .card h2 {
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  text-align: center;
+}
+.all-cards .cards-section .cards .card .link {
+  width: 100px;
+  height: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 7px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 5px;
+  background-color: rgba(240, 57, 57, 0.1);
+  border: 1px solid rgba(240, 57, 57, 0.1);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(240, 57, 57, 0.3);
+  box-shadow: 0 3px 5px 0 rgba(240, 57, 57, 0.3);
+}
+.all-cards .cards-section .cards .card .link:hover {
+  background-color: #cc3030;
+  color: #fff;
+}
+.all-cards .cards-section .cards .card p {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+.all-cards .cards-section img {
+  width: 100%;
+}
+
+/* About */
+.about {
+  background-color: #000;
+  border-bottom: 1px solid #585858;
+}
+
+.about .first {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.822),
+      rgba(0, 0, 0, 0.753)
+    ),
+    url("../../../static/movies/images/marvel.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .first .head h1 {
+  text-align: center;
+  font-size: 35px;
+  background-image: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about .first .head p {
+  margin-top: 20px;
+  text-align: center;
+  background-image: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+  max-width: 700px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.about .second {
+  padding: 80px 0;
+}
+.about .second .content {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.about .second .content .img img {
+  width: 500px;
+  border-radius: 50px;
+  border: 2px solid #cc3057;
+}
+.about .second h1 {
+  background-image: linear-gradient(90deg, #ff00b3, #c50c0c);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 20px;
+  text-align: center;
+}
+.about .second p {
+  background-image: linear-gradient(45deg, #f7a2c3, #da3535);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Add */
+.background {
+  padding: 40px 0;
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.89),
+      rgba(0, 0, 0, 0.88)
+    ),
+    url("../../../static/movies/images/hjh.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-data {
+  background-color: #000000;
+  width: 100%;
+}
+.add-data .add {
+  padding: 60px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background h1 {
+  background-image: linear-gradient(90deg, #ff00b3, #c50c0c);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+.add-data .add .form form {
+  width: 600px;
+}
+.add-data .add .form form label {
+  margin-top: 15px;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+}
+
+.add-data .add .form form input {
+  background-color: transparent;
+  color: #fff;
+  height: 20px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  padding: 18px 11px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: 0;
+  margin: 5px 0;
+}
+.add-data .add .form .photo-input {
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 14px;
+  outline: 0;
+  margin: 8px 0;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.add-data .add .form form .photo-input:hover {
+  border: 0;
+}
+.add-data .add .form form .photo-input:focus {
+  border: 0;
+}
+
+.add-data .add .form form input:hover {
+  border: 1px solid #921414;
+}
+.add-data .add .form form input:focus {
+  border: 1px solid #921414;
+}
+.add-data .add .form form input::placeholder {
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.add-data .add .form form button {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  background-color: #470707;
+  box-shadow: 0 2px 0 rgba(255, 5, 5, 0.1);
+  font-size: 14px;
+  height: 32px;
+  padding: 20px 15px;
+  border-radius: 6px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.add-data .add .form form button:hover {
+  background-color: #ad1f1f;
+}
+.add-data .add .form form textarea {
+  margin: 5px 0;
+  height: 80px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  padding: 18px 11px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: 0;
+}
+.add-data .add .form form textarea:hover {
+  border: 1px solid #921414;
+}
+.add-data .add .form form textarea:focus {
+  border: 1px solid #921414;
+}
+.add-data .add .form form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.623);
+}
+.add-data .add .form form select {
+  margin: 5px 0;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  padding: 10px 5px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  outline: 0;
+}
+.add-data .add .form form select option {
+  color: #000;
+}
+
+/* Contact */
+.contact {
+  background-color: #000;
+}
+
+.contact .first {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.822),
+      rgba(0, 0, 0, 0.753)
+    ),
+    url("../../../static/movies/images/marvel.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .first .head h1 {
+  text-align: center;
+  font-size: 35px;
+  background-image: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.contact .first .head p {
+  margin-top: 20px;
+  text-align: center;
+  background-image: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+  max-width: 700px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.contact .second {
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+.contact .headd {
+  text-align: center;
+  background-image: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-top: 80px;
+}
+.contact .second form {
+  width: 600px;
+}
+.contact .second form input {
+  height: 20px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  padding: 18px 11px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: 0;
+  transition: all 0.4s;
+  margin: 5px 0;
+  background-color: #f0dada;
+}
+
+.contact .second form input:hover {
+  border: 1px solid #f89f9f;
+}
+.contact .second form input:focus {
+  border: 1px solid #f89f9f;
+}
+.contact .second form input::placeholder {
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.contact .second form textarea {
+  height: 100px;
+  border: 2px solid #d9d9d9;
+  width: 100%;
+  padding: 18px 11px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: 0;
+  margin: 8px 0;
+  transition: all 0.4s;
+  background-color: #f0dada;
+}
+
+.contact .second form textarea:hover {
+  border: 1px solid #f89f9f;
+}
+.contact .second form textarea:focus {
+  border: 1px solid #f89f9f;
+}
+.contact .second form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.contact .second form p {
+  margin-top: 18px;
+}
+.contact .second form label {
+  color: #ce5757;
+}
+.contact .second form .btn {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .second form button {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  color: #fff;
+  background-color: #470707;
+  box-shadow: 0 2px 0 rgba(255, 5, 5, 0.1);
+  font-size: 14px;
+  height: 32px;
+  padding: 20px 15px;
+  border-radius: 6px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.contact .second form button:hover {
+  background-color: #ad1f1f;
+}
+
+/* Suggests */
+.all-suggests .suggests-section {
+  padding: 60px 0;
+  background-color: #000;
+}
+.all-suggests .suggests-section .suggests .suggest{
+  display: flex;
+  justify-content: center;
+}
+.all-suggests .suggests-section .suggests .suggest .card{
+  width: 80%;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 10px 1px #470707;
+  margin: 20px 0;
+  cursor: pointer;
+  padding: 15px 10px;
+}
+.all-suggests .suggests-section .suggests .suggest .card:hover{
+  transform: scale(1.02);
+}
+.all-suggests .suggests-section .suggests .suggest .card h2{
+  color: #9b9a9a;
+}
+.all-suggests .suggests-section .suggests .suggest .card p{
+  margin-top: 15px;
+  color: #9b9a9a;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(0, 0, 0);
+  padding: 20px 50px;
+  color: white;
+}
+
+.footer .top ul li {
+  list-style: none;
+  margin: 12px 0;
+}
+.footer .top ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #afafaf;
+}
+.footer .top ul li a:hover {
+  color: rgb(235, 157, 84);
+  transition: all 0.4s;
+}
+
+.footer .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .top .media ul {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.footer .top .media h3 {
+  color: #f08d8d;
+}
+.footer .top .media ul li {
+  border: 1px solid #5f1212;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: rgb(230, 166, 154);
+  color: #5f1212;
+}
+
+.footer .top .media ul li .fa-brands {
+  font-size: 20px;
+}
+.footer .top .media ul li:hover {
+  background-color: #5f1212;
+  color: #fff;
+}
+
+.footer img {
+  width: 200px;
+}
+.footer .top .logo p {
+  width: 340px;
+  margin-top: 10px;
+  color: #9b9a9a;
+  line-height: 1.5;
+}
+
+.footer .bottom {
+  margin-top: 15px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #313030;
+}
+.footer .bottom .fa-heart {
+  margin-left: 10px;
+  color: #9c0303;
+}

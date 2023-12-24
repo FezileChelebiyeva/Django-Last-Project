@@ -1,0 +1,17 @@
+{% extends 'movies/base.html' %} {% block content %} {% load static %}
+<div class="add-data">
+  <div class="background">
+    <h1>Yeni filmin əlavə edilməsi</h1>
+  </div>
+  <div class="container">
+    <div class="add">
+      <div class="form">
+        <form action="{% url 'add' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %} {{ form.as_p }}
+          <button type="submit">Əlavə etmək</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

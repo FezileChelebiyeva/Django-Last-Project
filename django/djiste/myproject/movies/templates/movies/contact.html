@@ -1,0 +1,66 @@
+{% extends 'movies/base.html' %} {% block content %} {% load static %}
+<div class="contact">
+  <div class="first">
+    <div class="head">
+      <h1>Bizimlə əlaqə saxlayın!</h1>
+      <p>
+        Bizimlə əlaqə saxladığınız üçün təşəkkür edirik! Film həvəskarları ilə
+        əlaqə yaratmaqdan məmnunuq. İstər sualınız, istər təklifiniz olsun,
+        istərsə də film haqqında öz fikirlərinizi bölüşmək istəsəniz, biz sizin
+        üçün buradayıq.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="headd">İstədiyiniz an müraciət edə bilərsiniz!</h1>
+    <div class="second">
+      <form action="{% url 'contact' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Əlavə etmək</button>
+      </form>
+      <!-- <form action="">
+        <div class="inp">
+          <p>
+            <label for="name">Adınız</label>
+          </p>
+          <input type="text" name="name" id="name" placeholder="Adınız" />
+        </div>
+        <div class="inp">
+          <p>
+            <label for="email">Mail ünvanınız</label>
+          </p>
+          <input type="email" name="email" id="email" placeholder="Mail ünvanınız" />
+        </div>
+        <div class="inp">
+          <p>
+            <label for="problem">Təklif, irad və ya suallarınız</label>
+          </p>
+          <textarea name="problem" id="problem" cols="30" rows="10" placeholder="Təklif, irad və ya suallarınız"></textarea>
+        </div>
+        <div class="btn">
+          <button>Göndər</button>
+        </div>
+      </form> -->
+    </div>
+    <div class="third">
+      <div id="map">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="100%"
+              height="450"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+            <a href="https://123movies-i.net"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

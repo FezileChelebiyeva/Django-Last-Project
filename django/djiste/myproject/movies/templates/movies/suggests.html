@@ -1,0 +1,23 @@
+{% extends 'movies/base.html' %} {% block content %} {% load static %}
+<div class="all-suggests">
+  <div class="background">
+    <h1>Sizlərdən gələn təklif, irad və sualları buarada görə bilərsiniz.</h1>
+  </div>
+  <div class="suggests-section">
+    <div class="container">
+      <h1>Bütün Filmlər</h1>
+      <div class="suggests">
+        {% for c in contacts %}
+        <div class="suggest">
+          <div class="card">
+            <h2>{{c.name}}</h2>
+            <!-- <b>{{c.email}}</b> -->
+            <p>{{c.suggest}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'movies/base.html' %} {% block content %} {% load static %}
+<div class="index">
+  <div class="navbar">
+    <ul>
+      {% if post_id %} {% for p in posts %}
+      <li class="selected"><a href="{% url 'home' %}">Bütün filmlər</a></li>
+
+      <div class="movie">
+        <div class="name">
+          <p>Film:</p>
+          <p>{{p.name}}</p>
+        </div>
+        <div class="IMDb">
+          <span>IMDb:</span>
+          <p>{{p.imdb}}</p>
+        </div>
+      </div>
+      {% endfor %} {% else %} {% if cat_selected == 0 %}
+      <li class="selected">Bütün filmlər</li>
+      {% else %}
+      <li class="selected"><a href="{% url 'home' %}">Bütün filmlər</a></li>
+      {% endif %} {% for c in cats %} {% if c.pk == cat_selected %}
+      <li class="selected">{{c.name}}</li>
+      {% else %}
+      <li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+      {% endif %} {% endfor %} {% endif %}
+
+      <li class="share">
+        <a href="https://www.aztu.edu.az/az" target="_blank">
+          <img src="{% static 'movies/images/logo-white.svg' %}" alt="" />
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="home-section">
+    <h1>Filmlər</h1>
+    <div class="cards">
+      {% for p in posts %} {% if post_id %}
+      <div class="card-detail">
+        <div class="img">
+          <img src="{{p.photo.url}}" />
+          <div class="article-panel">
+            <p>Növ: {{p.cat.name}}</p>
+            <p>Yaranma tarixi: {{p.time_create|date:"d-m-Y H:i:s"}}</p>
+            <p>Son dəyişiklik: {{p.time_update|date:"d-m-Y H:i:s"}}</p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <h2>{{p.name}}</h2>
+
+          {% autoescape on%}
+          <p>{{p.content| linebreaks}}</p>
+          {% endautoescape %}
+        </div>
+      </div>
+
+      {% else %}
+      <div class="card">
+        <a href="{{ p.get_absolute_url }}">
+          <img src="{{p.photo.url}}" />
+        </a>
+        <h2>{{p.name}}</h2>
+
+        {% autoescape on%}
+        <p>{{p.content| linebreaks| truncatewords:30}}</p>
+        {% endautoescape %}
+
+        <div class="text">
+          <p class="link-read-post">
+            <a class="link" href="{{ p.get_absolute_url }}">Davamı</a>
+          </p>
+        </div>
+        <div class="article-panel">
+          <p>Növ: {{p.cat.name}}</p>
+        </div>
+      </div> 
+
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'movies/base.html' %} {% block content %} {% load static %}
+<div class="about">
+  <div class="first">
+    <div class="head">
+      <h1>Movify saytına xoş gəlmisiniz!</h1>
+      <p>
+        Movify-da biz inanırıq ki, hər bir hekayə danışılmağa layiqdir və hər
+        bir tamaşaçı kinonun sehri qarşısında birinci sırada oturmağa layiqdir.
+        Kino həvəskarları və hekayəçilər kimi biz hər zövqə uyğun kino səyahəti
+        təklif edən janrları, dövrləri və mədəniyyətləri əhatə edən müstəsna
+        filmlər kolleksiyasını seçmişik.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="second">
+      <div class="content">
+        <div class="img">
+          <img src="{% static 'movies/images/foto.jpg' %}" alt="" />
+        </div>
+        <div class="text">
+          <h1>Bizim missiyamız</h1>
+          <p>
+            Bizim missiyamız sadədir: tamaşaçıları kinonun təklif etdiyi ən
+            yaxşı şeylərlə əlaqələndirmək. İstər köhnəlməyən klassiklərin,
+            nəbzini vuran hərəkətlərin, ürəkaçan dramların, istərsə də avanqard
+            hind filmlərin pərəstişkarı olmağınızdan asılı olmayaraq, hər kəs
+            üçün bir şeyimiz var. Movify hər bir klik yeni macəraya qapı açan
+            əyləncə dünyasına pasportunuzdur.
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="text">
+          <h1>Kino həvəskarının cənnəti</h1>
+          <p>
+            Növbəti vəsvəsənizi axtaran bir film həvəskarısınız? Daha baxma.
+            Movify kino həvəskarları üçün sığınacaq, hekayənin sehrinin sərhəd
+            tanımadığı rəqəmsal aləmdir. Tənqidçilər tərəfindən bəyənilən
+            şedevrlərdən tutmuş kəşf olunmağı gözləyən gizli qiymətli daşlara
+            qədər bizim geniş kitabxanamız kinematoqrafiya mükəmməlliyinin
+            xəzinəsidir.
+          </p>
+        </div>
+        <div class="img">
+          <img src="{% static 'movies/images/ss.jpg' %}" alt="" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="img">
+          <img src="{% static 'movies/images/et.jpg' %}" alt="" />
+        </div>
+        <div class="text">
+          <h1>Kinoda müxtəliflik</h1>
+          <p>
+            Biz dünyanın hər yerindən filmləri əhatə edən hekayələrin
+            müxtəlifliyini qeyd edirik. Dilləri, mədəniyyətləri və
+            perspektivləri əhatə edən diqqətlə seçilmiş seçimimiz vasitəsilə
+            insan təcrübələrinin zəngin qobelenini araşdırın.Movify sadəcə yayım
+            xidməti deyil; bu, kinonun universal dilinin təntənəsidir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

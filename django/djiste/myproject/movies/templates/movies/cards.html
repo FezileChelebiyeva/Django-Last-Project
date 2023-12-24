@@ -1,0 +1,24 @@
+{% extends 'movies/base.html' %} {% block content %} {% load static %}
+<div class="all-cards">
+  <div class="container">
+    <div class="cards-section">
+      <h1>Bütün Filmlər</h1>
+      <div class="cards">
+        {% for p in posts %}
+        <div class="card">
+          <a href="{{ p.get_absolute_url }}">
+            <img src="{{p.photo.url}}" />
+          </a>
+          <h2>{{p.name}}</h2>
+          <div class="article-panel">
+            <p>Növ: {{p.cat.name}}</p>
+            <p>Yaranma tarixi: {{p.time_create|date:"d-m-Y H:i:s"}}</p>
+            <p>Son dəyişiklik: {{p.time_update|date:"d-m-Y H:i:s"}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
